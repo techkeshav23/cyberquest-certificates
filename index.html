@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberQuest 2025 - Certificates</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 255, 65, 0.1);
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 2px solid #00ff41;
+        }
+        
+        h1 {
+            font-size: 48px;
+            color: #00ff41;
+            text-shadow: 0 0 20px #00ff41;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #0ff;
+            margin-bottom: 20px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #00ff41;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #8b949e;
+        }
+        
+        .search-box {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        #searchInput {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px 20px;
+            font-size: 18px;
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            background: rgba(0, 255, 65, 0.1);
+            color: #fff;
+            outline: none;
+        }
+        
+        #searchInput::placeholder {
+            color: #8b949e;
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .certificate-card {
+            background: rgba(13, 17, 23, 0.8);
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
+        }
+        
+        .participant-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0ff;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #00ff41, #0ff);
+            color: #0a0e27;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #8b949e;
+            font-size: 20px;
+            display: none;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            color: #8b949e;
+            border-top: 2px solid rgba(0, 255, 65, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 CYBERQUEST 2025</h1>
+            <div class="subtitle">Participation Certificates - Technovation</div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Total Participants</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Search participant name..." onkeyup="searchCertificates()">
+        </div>
+        
+        <div class="certificates-grid" id="certificatesGrid">
+            <div class="certificate-card" data-name="archana singh">
+                <div class="participant-name">Archana Singh</div>
+                <a href="certificate_Archana Singh.pdf" class="btn" target="_blank">📄 View Certificate</a>
+            </div>
+            <div class="certificate-card" data-name="ayush">
+                <div class="participant-name">Ayush</div>
+                <a href="certificate_Ayush.pdf" class="btn" target="_blank">📄 View Certificate</a>
+            </div>
+            <div class="certificate-card" data-name="govind mishra">
+                <div class="participant-name">Govind Mishra</div>
+                <a href="certificate_Govind Mishra.pdf" class="btn" target="_blank">📄 View Certificate</a>
+            </div>
+            <div class="certificate-card" data-name="harshit gupta">
+                <div class="participant-name">Harshit gupta</div>
+                <a href="certificate_Harshit gupta.pdf" class="btn" target="_blank">📄 View Certificate</a>
+            </div>
+            <div class="certificate-card" data-name="kirti jain">
+                <div class="participant-name">Kirti Jain</div>
+                <a href="certificate_Kirti Jain.pdf" class="btn" target="_blank">📄 View Certificate</a>
+            </div>
+            <div class="certificate-card" data-name="vaibhav kumar singh">
+                <div class="participant-name">Vaibhav Kumar Singh</div>
+                <a href="certificate_Vaibhav Kumar Singh.pdf" class="btn" target="_blank">📄 View Certificate</a>
+            </div>
+            <div class="certificate-card" data-name="vedansh srivastava">
+                <div class="participant-name">Vedansh Srivastava</div>
+                <a href="certificate_Vedansh Srivastava.pdf" class="btn" target="_blank">📄 View Certificate</a>
+            </div>
+        </div>
+        
+        <div class="no-results" id="noResults">
+            😔 No certificates found matching your search.
+        </div>
+        
+        <footer>
+            <p>© 2025 Technovation - CyberQuest</p>
+            <p style="margin-top: 10px; font-size: 14px;">
+                Certificates hosted on GitHub Pages
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        function searchCertificates() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('certificatesGrid');
+            const cards = grid.getElementsByClassName('certificate-card');
+            const noResults = document.getElementById('noResults');
+            
+            let visibleCount = 0;
+            
+            for (let i = 0; i < cards.length; i++) {
+                const name = cards[i].getAttribute('data-name');
+                if (name.includes(filter)) {
+                    cards[i].style.display = '';
+                    visibleCount++;
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+            
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+                grid.style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                grid.style.display = 'grid';
+            }
+        }
+    </script>
+</body>
+</html>
